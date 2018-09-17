@@ -5,7 +5,7 @@
     <title> Course Manager</title>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
     </script>
@@ -14,34 +14,110 @@
     <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
     <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body class="bg-light">
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-info">
 
-    <a class="navbar-brand col-4" href="#">Course Manager</a>
+    <a class="collapse navbar-collapse navbar-brand col-lg-3"
+       href="courselist.template.client.html">
+        Course Manager
+    </a>
 
-    <form class="form-inline col-4 my-2 my-md-0">
-        <input class="form-control" type="text" placeholder="New Course Title">
-    </form>
+    <div class="container-fluid col-lg-5 col-sm-8 col-md-8">
+        <input type="text"
+               class="container-fluid form-control"
+               id="newCourse"
+               placeholder="New Course Title" value=""
+               required autofocus>
+        <button class="btn btn-danger" style="border-radius:5px;">
+            <span class="glyphicon glyphicon-plus">+</span>
+        </button>
+
+    </div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse col-lg-6" id="navbarsExample04">
+    <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="login.template.client.html"> Login</a>
+
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="register.template.client.html">Register</a>
+                <a class="nav-link" href="login/login.template.client.html"> Login</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="register/register.template.client.html">Register</a>
             </li>
         </ul>
     </div>
 
 </nav>
+
+<div class="d-none d-lg-block container-fluid bg-secondary col-lg-12" style="height:30px;">
+
+    <div class="container-fluid courselist-title-tag col-lg-7"
+         style="text-align:center;float:left;border:0px solid black;color:whitesmoke;">
+            Title
+    </div>
+    <div class="container-fluid courselist-ownedby-tag col-lg-1"
+         style="text-align:center;float:left;border:0px solid black;color:whitesmoke;">
+            Owned By
+    </div>
+    <div class="container-fluid courselist-lastmodified-tag col-lg-2"
+         style="text-align:center;float:left;border:0px solid black;color:whitesmoke;">
+        Last Modified
+    </div>
+    <div class="container-fluid courselist-gridveiw-tag col-lg-1"
+         style="text-align:center;float:left;border:0px solid black;color:whitesmoke;">
+            Grid View
+    </div>
+    <div class="container-fluid courselist-atoz-tag col-lg-1"
+         style="text-align:center;float:left;border:0px solid black;color:whitesmoke;">
+            A-Z
+    </div>
+
+</div> <!--Secondary Navigation-->
+
+<div class="container-fluid col-lg-12 bg-info"
+     style="text-align:center;float:left;border:0px solid black;margin-top:2%">
+
+    <span class="container-fluid  courselist-course-name col-lg-7 col-sm-10 col-md-8 col-xs-6"
+         style="color:whitesmoke;float:left;text-align:center;border:0px solid black;margin-top:0.5%">
+        <img src="google_docs.png"
+             style="width:22px;height:20px;text-align:center;border:0px solid black;display:flow;">
+        <a href="courseeditor.template.client.html"
+           style="text-decoration: none;color:whitesmoke;">
+            CS 5610 Web Development Graduate
+        </a>
+    </span>
+
+     <span class="d-none d-lg-block col-lg-1 courselist-course-author"
+          style="color:whitesmoke;float:left;border:0px solid black;margin-top: 0.5%">
+         By me
+     </span>
+
+     <a class="d-none d-lg-block col-lg-2 courselist-course-time"
+          style="color:whitesmoke;float:left;margin-left:2%;text-align:center;border:0px solid black;margin-top:0.5%">
+              6 : 45 pm
+     </a>
+
+      <span class="container-fluid  courselist-course-remove col-lg-1 col-sm-1 col-md-1 col-xs-1"
+           style="color:whitesmoke;float:left;text-align:center;border:0px solid black;">
+                    <button class="btn btn-danger">
+                        X
+                    </button>
+      </span>
+
+    </div>
+
+</div>
 
 </body>
 </html>
